@@ -77,11 +77,11 @@ const Main = () => {
               >
                 <div
                   style={{ backgroundColor: item.color }}
-                  className="w-60 p-5"
+                  className="flex justify-between w-60 p-4"
                 >
                   {`${item.item}`}
                   <button
-                    className="button"
+                    className="rounded-full bg-green-500 px-2 py-1 text-xs border-0 text-gray-100"
                     id="delete"
                     onClick={(e) => deleteNote(item.id)}
                   >
