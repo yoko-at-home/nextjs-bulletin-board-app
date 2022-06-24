@@ -4,16 +4,12 @@ import { v4 as uuidv4 } from "uuid";
 var randomColor = require("randomcolor");
 
 const Main = () => {
-  const initialState = () => [];
+  const initialState = JSON.parse(localStorage.getItem("items")) || [];
   const [item, setItem] = useState("");
   const [items, setItems] = useState(initialState);
-  if (typeof window !== "undefined") {
-    // You now have access to `window`
-    JSON.parse(localStorage.getItem("items")) || [];
-  }
 
   const keyPress = (event) => {
-    var code = event.keyCode || event.which;
+    let code = event.keyCode || event.which;
     if (code === 13) {
       newitem();
     }
