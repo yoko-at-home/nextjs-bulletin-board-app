@@ -52,10 +52,10 @@ const Main = () => {
     setItems(items.filter((item) => item.id !== id));
   };
   return (
-    <div className="text-gray-900">
-      <div className="flex justify-center mx-auto p-20">
+    <div className="text-gray-900 p-3">
+      <div className="flex justify-center mx-auto">
         <input
-          className="bg-red-200 rounded-sm  px-3 py-2"
+          className="bg-red-200 rounded-sm px-3 py-2"
           value={item}
           onChange={(e) => setItem(e.target.value)}
           placeholder="Enter something..."
