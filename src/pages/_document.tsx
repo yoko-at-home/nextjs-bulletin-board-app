@@ -4,7 +4,8 @@ const MyDocument = () => {
   const image =
     "https://nextjs-bulletin-board-app.vercel.app/favicons/twitter.webp";
   const url = "https://nextjs-bulletin-board-app.vercel.app/";
-  const content = "ブレインストームアプリ";
+  const content = "Brainstorm App";
+  const description = "Next.js with Dynamic import to disable SSR";
   return (
     <Html lang="ja">
       <Head>
@@ -35,9 +36,9 @@ const MyDocument = () => {
           href="/favicons/safari-pinned-tab.svg"
           color="#cf980a"
         />
-        <meta name="description" content={content} />
+        <meta name="description" content={description} />
         <meta property="og:title" content={content} />
-        <meta property="og:description" content={content} />
+        <meta property="og:description" content={description} />
         <meta name="keywords" content="プログラミング, Web制作" />
         <meta property="og:type" content="blog" />
         <meta property="og:url" content={url} />
@@ -48,7 +49,7 @@ const MyDocument = () => {
         <meta name="twitter:site" content="@yokoiwasaki6" />
         <meta name="twitter:url" content={image} />
         <meta name="twitter:title" content={content} />
-        <meta name="twitter:description" content={content} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
         <link rel="canonical" href={url} />
         <link rel="shortcut icon" href={"/favicon.png"} />
