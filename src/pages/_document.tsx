@@ -42,7 +42,7 @@ const MyDocument = () => {
         <meta name="twitter:site" content="@yokoiwasaki6" />
         <meta
           name="twitter:url"
-          content="https://nextjs-bulletin-board-app.vercel.app/favicons/icon-512x512.png"
+          content="https://nextjs-bulletin-board-app.vercel.app/favicons/twitter.webp"
         />
         <meta name="twitter:title" content="ブレインストームアプリ作りました" />
       </Head>
