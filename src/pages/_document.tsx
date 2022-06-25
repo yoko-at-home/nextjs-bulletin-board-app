@@ -1,6 +1,10 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
 const MyDocument = () => {
+  const image =
+    "https://nextjs-bulletin-board-app.vercel.app/favicons/twitter.webp";
+  const url = "https://nextjs-bulletin-board-app.vercel.app/";
+  const content = "ブレインストームアプリ";
   return (
     <Html lang="ja">
       <Head>
@@ -31,20 +35,32 @@ const MyDocument = () => {
           href="/favicons/safari-pinned-tab.svg"
           color="#cf980a"
         />
-        {/* インデックス 登録のリクエスト処理 */}
+        <meta name="description" content={content} />
+        <meta property="og:title" content={content} />
         <meta
-          name="google-site-verification"
-          content="b8bHgMnOcmFYxe-Nz8dhHx0AKW5h8BgWvAWKWreYUbQ"
+          property="og:description"
+          content="2020年から2021年の活動をまとめました"
         />
-        <meta name="msapplication-TileColor" content="#cf980a" />
-        <meta name="theme-color" content="#f7ecd2" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="keywords" content="プログラミング, Web制作" />
+        <meta property="og:type" content="blog" />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={image} />
+        <meta property="og:site_name" content={content} />
+        <meta
+          name="twitter:card"
+          content="2020年から2021年の活動をまとめました"
+        />
+        <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:site" content="@yokoiwasaki6" />
+        <meta name="twitter:url" content={image} />
+        <meta name="twitter:title" content={content} />
         <meta
-          name="twitter:url"
-          content="https://nextjs-bulletin-board-app.vercel.app/favicons/twitter.webp"
+          name="twitter:description"
+          content="2020年から2021年の活動をまとめました"
         />
-        <meta name="twitter:title" content="ブレインストームアプリ作りました" />
+        <meta name="twitter:image" content={image} />
+        <link rel="canonical" href={url} />
+        <link rel="shortcut icon" href={"/favicon.png"} />
       </Head>
       <body className="antialiased text-black bg-white">
         <Main />
