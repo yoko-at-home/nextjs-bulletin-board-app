@@ -49,7 +49,7 @@ const Main = () => {
   };
   return (
     <div className="text-gray-900 p-3">
-      <div className="flex justify-center mx-auto">
+      <div className="flex justify-center mx-auto mb-10">
         <input
           className="bg-red-200 rounded-sm px-3 py-2"
           value={item}
@@ -79,7 +79,7 @@ const Main = () => {
                   style={{ backgroundColor: item.color }}
                   className="flex justify-between w-60 p-4"
                 >
-                  {`${item.item}`}
+                  <div>{`${item.item}`}</div>
                   <button
                     className="rounded-full bg-green-500 px-2 py-1 text-xs border-0 text-gray-100"
                     id="delete"
