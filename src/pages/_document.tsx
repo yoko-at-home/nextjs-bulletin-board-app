@@ -38,7 +38,7 @@ const MyDocument = () => {
         />
         <meta name="msapplication-TileColor" content="#cf980a" />
         <meta name="theme-color" content="#f7ecd2" />
-        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@yokoiwasaki6" />
         <meta
           name="twitter:url"
