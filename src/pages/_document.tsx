@@ -38,6 +38,8 @@ const MyDocument = () => {
         />
         <meta name="msapplication-TileColor" content="#cf980a" />
         <meta name="theme-color" content="#f7ecd2" />
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:site" content="@yokoiwasaki6" />
         <meta
           name="twitter:url"
           content="https://nextjs-bulletin-board-app.vercel.app/favicons/icon-512x512.png"
