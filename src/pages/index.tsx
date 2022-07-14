@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import dynamic from "next/dynamic";
+import { LoaderAnimation } from "../components/Animation";
 import { Layout } from "../layout";
 
 const DynamicBulletin: NextPage = dynamic(
@@ -12,6 +13,9 @@ const DynamicBulletin: NextPage = dynamic(
 const Home = () => {
   return (
     <Layout bgColor="gray">
+      <div className="flex justify-center my-20">
+        <LoaderAnimation />
+      </div>
       <DynamicBulletin />
     </Layout>
   );
