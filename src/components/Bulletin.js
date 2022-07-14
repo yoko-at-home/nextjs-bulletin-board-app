@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Draggable from "react-draggable";
 import { v4 as uuidv4 } from "uuid";
 var randomColor = require("randomcolor");
-import MouseParticles from "react-mouse-particles";
+// import MouseParticles from "react-mouse-particles";
 
 const Main = () => {
   const initialState = JSON.parse(localStorage.getItem("items")) || [];
@@ -50,14 +50,14 @@ const Main = () => {
   };
   return (
     <div className="text-gray-500 p-3">
-      <MouseParticles
+      {/* <MouseParticles
         g={1}
         number={200}
         color={["#ff0000", "peachpuff"]}
         radius={10}
         cull="MuiSvgIcon-root,MuiButton-root"
         level={10}
-      />
+      /> */}
       <div className="flex justify-center mx-auto mb-10">
         <input
           className="bg-red-200 rounded-sm px-3 py-2"
