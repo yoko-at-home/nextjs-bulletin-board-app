@@ -1,7 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
 import Animation from "./99137-cat-smoking-cigrate.json";
-import { NextPage } from "next";
 
 export const Animation404 = () => {
   return (
