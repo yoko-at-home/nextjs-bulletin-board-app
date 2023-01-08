@@ -9,7 +9,7 @@ export const Footer: NextPage = () => {
       <div>
         <span>
           <a
-            href="https://over40webclub.netlify.app/"
+            href="https://yoko-portfolio.vercel.app/about/"
             target="_blank"
             rel="noreferrer"
           >
@@ -19,11 +19,11 @@ export const Footer: NextPage = () => {
         <span>{` • `}</span>
         <span>{`© ${new Date().getFullYear()}`}</span>
       </div>
-      {router.pathname === "/" ? (
+      {/* {router.pathname === "/" ? (
         <NavButton href={"/contact"}>contact</NavButton>
       ) : (
         <NavButton href={"/"}>home</NavButton>
-      )}
+      )} */}
     </div>
   );
 };
