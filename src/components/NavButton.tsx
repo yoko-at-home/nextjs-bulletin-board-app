@@ -11,7 +11,7 @@ const NavButton: FC<Props> = (props) => {
   return (
     <Link href={props.href}>
       <Button variant="outline" color="gray" size="xs" uppercase>
-        <a>{props.children}</a>
+        {props.children}
       </Button>
     </Link>
   );
