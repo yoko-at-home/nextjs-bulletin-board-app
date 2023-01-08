@@ -1,1 +1,1 @@
-export { LoaderAnimation } from "./loader";
+export { CatAnimation, LoaderAnimation } from "./loader";
