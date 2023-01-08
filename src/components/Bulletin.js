@@ -9,12 +9,12 @@ const Main = () => {
   const [item, setItem] = useState("");
   const [items, setItems] = useState(initialState);
 
-  const keyPress = (event) => {
-    let code = event.keyCode || event.which;
-    if (code === 13) {
-      newitem();
-    }
-  };
+  // const keyPress = (event) => {
+  //   let code = event.keyCode || event.which;
+  //   if (code === 13) {
+  //     newitem();
+  //   }
+  // };
 
   const newitem = () => {
     if (item.trim() !== "") {
@@ -49,7 +49,7 @@ const Main = () => {
     setItems(items.filter((item) => item.id !== id));
   };
   return (
-    <div className="text-gray-500 p-3">
+    <div className="text-gray-500 p-3 font-serif">
       {/* <MouseParticles
         g={1}
         number={200}
@@ -58,13 +58,13 @@ const Main = () => {
         cull="MuiSvgIcon-root,MuiButton-root"
         level={10}
       /> */}
-      <div className="flex justify-center mx-auto mb-10">
+      <div className="flex justify-center mx-auto mb-10 font-semibold">
         <input
           className="bg-red-200 rounded-sm px-3 py-2"
           value={item}
           onChange={(e) => setItem(e.target.value)}
           placeholder="Enter something..."
-          onKeyPress={(e) => keyPress(e)}
+          // onKeyPress={(e) => keyPress(e)}
         />
         <button
           className="bg-red-500 rounded-sm text-white px-3 py-2"
