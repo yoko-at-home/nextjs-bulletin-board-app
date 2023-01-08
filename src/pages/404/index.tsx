@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import NavButton from "../../components/NavButton";
 import { Layout } from "../../layout";
-import { Animation404 } from "./animation";
+import { Animation404 } from "../../components/Animation/animation404";
 
 const Custom404: NextPage = () => {
   return (
