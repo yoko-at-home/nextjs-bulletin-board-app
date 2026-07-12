@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
-import { CatAnimation } from "../components/Animation";
 import { Layout } from "../layout";
+
+const CatAnimation = dynamic(
+  () =>
+    import("../components/Animation").then((mod) => mod.CatAnimation),
+  { ssr: false }
+);
 
 const DynamicBulletin: NextPage = dynamic(
   () => import("../components/Bulletin"),

@@ -7,7 +7,10 @@ import { v4 as uuidv4 } from "uuid";
 // import MouseParticles from "react-mouse-particles";
 
 const Main = () => {
-  const initialState = JSON.parse(localStorage.getItem("items")) || [];
+  const initialState =
+    typeof window !== "undefined"
+      ? JSON.parse(localStorage.getItem("items")) || []
+      : [];
   const [item, setItem] = useState("");
   const [items, setItems] = useState(initialState);
 
