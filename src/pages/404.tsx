@@ -1,7 +1,15 @@
 import type { NextPage } from "next";
-import NavButton from "../../components/NavButton";
-import { Layout } from "../../layout";
-import { Animation404 } from "../../components/Animation/animation404";
+import dynamic from "next/dynamic";
+import NavButton from "../components/NavButton";
+import { Layout } from "../layout";
+
+const Animation404 = dynamic(
+  () =>
+    import("../components/Animation/animation404").then(
+      (mod) => mod.Animation404
+    ),
+  { ssr: false }
+);
 
 const Custom404: NextPage = () => {
   return (
