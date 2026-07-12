@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
-import { Comfortaa } from "@next/font/google";
+import type { ReactNode } from "react";
+import { Comfortaa } from "next/font/google";
 
 // バリアブルフォント
 const font = Comfortaa({
   weight: "variable",
+  subsets: ["latin"],
 });
 
 // 非バリアブルフォント

@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import NavButton from "../../components/NavButton";
 import { Layout } from "../../layout";
 import { Animation404 } from "../../components/Animation/animation404";

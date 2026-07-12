@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { Button } from "@mantine/core";
+import randomColor from "randomcolor";
+import { useEffect, useState } from "react";
 import Draggable from "react-draggable";
 import { v4 as uuidv4 } from "uuid";
-var randomColor = require("randomcolor");
+
 // import MouseParticles from "react-mouse-particles";
 
 const Main = () => {
@@ -40,7 +42,7 @@ const Main = () => {
   }, [items]);
 
   const updatePos = (data, index) => {
-    let newArr = [...items];
+    const newArr = [...items];
     newArr[index].defaultPos = { x: data.x, y: data.y };
     setItems(newArr);
   };
@@ -58,48 +60,52 @@ const Main = () => {
         cull="MuiSvgIcon-root,MuiButton-root"
         level={10}
       /> */}
-      <div className="flex justify-center mx-auto mb-10 font-semibold">
+      <div className="flex justify-center mx-auto mb-10 font-semibold items-center">
         <input
-          className="bg-red-200 rounded-sm px-3 py-2"
+          className="bg-red-200 rounded-sm px-6 py-2 mr-2"
           value={item}
           onChange={(e) => setItem(e.target.value)}
           placeholder="Enter something..."
           // onKeyPress={(e) => keyPress(e)}
         />
-        <button
+        <Button
+          variant="outline"
+          color="gray"
+          size="xs"
+          uppercase
           className="bg-red-500 rounded-sm text-white px-3 py-2"
           onClick={newitem}
         >
           ENTER
-        </button>
+        </Button>
       </div>
       <div>
-        {items &&
-          items.map((item, index) => {
-            return (
-              <Draggable
-                key={item.id}
-                defaultPosition={item.defaultPos}
-                onStop={(e, data) => {
-                  updatePos(data, index);
-                }}
+        {items?.map((item, index) => {
+          return (
+            <Draggable
+              key={item.id}
+              defaultPosition={item.defaultPos}
+              onStop={(_e, data) => {
+                updatePos(data, index);
+              }}
+            >
+              <div
+                style={{ backgroundColor: item.color }}
+                className="flex justify-between w-60 p-4"
               >
-                <div
-                  style={{ backgroundColor: item.color }}
-                  className="flex justify-between w-60 p-4"
+                <div>{`${item.item}`}</div>
+                <button
+                  type="button"
+                  className="rounded-full bg-green-500 px-2 py-1 text-xs border-0 text-gray-100"
+                  id="delete"
+                  onClick={() => deleteNote(item.id)}
                 >
-                  <div>{`${item.item}`}</div>
-                  <button
-                    className="rounded-full bg-green-500 px-2 py-1 text-xs border-0 text-gray-100"
-                    id="delete"
-                    onClick={(e) => deleteNote(item.id)}
-                  >
-                    X
-                  </button>
-                </div>
-              </Draggable>
-            );
-          })}
+                  X
+                </button>
+              </div>
+            </Draggable>
+          );
+        })}
       </div>
     </div>
   );
